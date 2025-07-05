@@ -22,7 +22,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/wazicare+Coming%20soon%20v1.png'); /* Use the URL path relative to public/ */
+            /*
+             * Confirmed: The image is 'wazicare+Coming soon v1.png'
+             * URL encoding for '+' is %2B, and for space is %20.
+             * This ensures the browser correctly interprets the filename.
+             */
+            background-image: url('/wazicare%2BComing%20soon%20v1.png'); /* Correct URL for the .png image */
             background-size: cover; /* Cover the entire area */
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Do not repeat the image */
