@@ -15,79 +15,65 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            /* Enhanced Background Gradient to mimic the image colors more accurately */
+            /* NEW Background Gradient using the provided hex colors */
             background: linear-gradient(
-                145deg, /* Slightly adjusted angle */
-                #71b5c2 0%,    /* Deeper teal/green */
-                #9ed6e5 25%,   /* Lighter blue-green */
-                #a8d9e2 50%,   /* Mid blue */
-                #c29ffc 75%,   /* Soft light purple */
-                #dcb6ff 100%   /* Lighter purple/pink */
+                145deg, /* Angle maintained */
+                #13B588 0%,    /* Vibrant Green */
+                #D9D9D9 25%,   /* Light Gray */
+                #1A8FE5 75%,   /* Strong Blue */
+                #13B588 100%   /* Vibrant Green again */
             );
-            /* Optional: Add a subtle overlay for texture if desired (can't fully replicate image grain) */
-            /* &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAQAAAC1HqYAAAAEY0lEQVQIHWMwMDDDAAMEAwL/B/4gAAAAAElFTkSuQmCC') repeat;
-                opacity: 0.05;
-                pointer-events: none;
-            } */
 
-            font-family: 'Lato', sans-serif; /* General body font */
+            font-family: 'Lato', sans-serif;
             color: #333;
             text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased; /* For smoother text on Mac */
-            -moz-osx-font-smoothing: grayscale; /* For smoother text on Mac */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .content-container {
-            /* Refined Glassmorphism Box */
-            background: rgba(255, 255, 255, 0.25); /* Slightly less transparent */
-            backdrop-filter: blur(12px); /* Slightly more blur */
-            -webkit-backdrop-filter: blur(12px); /* For Safari */
-            border-radius: 18px; /* Slightly more rounded */
-            padding: 45px 65px; /* More generous padding */
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 18px;
+            padding: 45px 65px;
             text-align: center;
-            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.3); /* Stronger, diffused shadow */
-            border: 1px solid rgba(255, 255, 255, 0.1); /* Very subtle border */
-            max-width: 650px; /* Increased max-width */
+            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 650px;
             margin: 20px;
             box-sizing: border-box;
-            display: flex; /* Use flexbox for vertical centering within box if needed */
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
         .content-container h1 {
-            font-family: 'Montserrat', sans-serif; /* Specific font for heading */
-            font-size: 2.3em; /* Larger, closer to image */
-            font-weight: 700; /* Bold */
-            color: #2b2b2b; /* Very dark gray/almost black */
-            margin-bottom: 22px; /* Adjusted spacing */
-            line-height: 1.35; /* Adjusted line height */
-            letter-spacing: -0.02em; /* Subtle letter spacing */
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.3em;
+            font-weight: 700;
+            color: #2b2b2b;
+            margin-bottom: 22px;
+            line-height: 1.35;
+            letter-spacing: -0.02em;
         }
 
         .content-container p {
-            font-family: 'Lato', sans-serif; /* Keep consistent with body or choose another */
-            font-size: 1.05em; /* Slightly larger */
-            color: #4a4a4a; /* Darker gray for subtext */
+            font-family: 'Lato', sans-serif;
+            font-size: 1.05em;
+            color: #4a4a4a;
             margin-bottom: 0;
             line-height: 1.5;
         }
 
         .copyright {
             position: absolute;
-            bottom: 25px; /* Slightly higher */
+            bottom: 25px;
             width: 100%;
             text-align: center;
-            color: rgba(255, 255, 255, 0.75); /* A bit brighter */
-            font-size: 0.8em; /* Slightly smaller */
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.8em;
             font-family: 'Lato', sans-serif;
             font-weight: 400;
             padding: 0 10px;
