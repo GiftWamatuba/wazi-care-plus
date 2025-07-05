@@ -23,11 +23,13 @@
             width: 100%;
             height: 100%;
             /*
-             * Confirmed: The image is 'wazicare+Coming soon v1.png'
-             * URL encoding for '+' is %2B, and for space is %20.
-             * This ensures the browser correctly interprets the filename.
+             * This is the CORRECTED path:
+             * './public/' tells the browser to look in the 'public' folder
+             * relative to where 'index.html' is. This works locally.
+             * Vercel also handles this path correctly as it serves 'public' content.
+             * The filename 'wazicare+Coming soon v1.png' is URL-encoded for safety.
              */
-            background-image: url('/wazicare%2BComing%20soon%20v1.png'); /* Correct URL for the .png image */
+            background-image: url('./public/wazicare%2BComing%20soon%20v1.png');
             background-size: cover; /* Cover the entire area */
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Do not repeat the image */
