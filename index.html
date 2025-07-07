@@ -14,6 +14,9 @@
     <meta property="og:url" content="https://www.wazicareplus.org/">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     
+    <!-- n8n Chatbot Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    
     <style>
         body, html {
             margin: 0;
@@ -158,5 +161,26 @@
     <div class="copyright">
         WaziCare+ © 2025 All Rights Reserved
     </div>
+
+    <!-- n8n Chatbot Script -->
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://gicheha.app.n8n.cloud/webhook/ffcf29b6-19e9-40fd-81a6-132910560043/chat',
+            // Modern theme configuration matching website colors
+            theme: {
+                primaryColor: '#13B588',      // Vibrant Green from your gradient
+                secondaryColor: '#1A8FE5',    // Strong Blue from your gradient
+                backgroundColor: '#f8f9fa',    // Light modern background
+                textColor: '#2b2b2b',         // Dark text for readability
+                borderColor: '#e9ecef',       // Subtle borders
+                borderRadius: '12px',         // Modern rounded corners
+                shadow: '0 4px 20px rgba(19, 181, 136, 0.15)' // Subtle green shadow
+            },
+            // Add custom welcome message with female name and mission context
+            welcomeMessage: "👋 Hello! I'm Aisha, your WaziCare+ AI health assistant.\n\nWe're an early-stage health-tech initiative using AI to support preventive care in underserved, climate-affected communities in Kenya. Using AI to improve access, dignity, and equity in community care.\n\nI'm here to help you with maternal health information and community care resources. How can I assist you today?"
+        });
+    </script>
 </body>
 </html>
