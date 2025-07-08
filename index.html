@@ -33,11 +33,15 @@
             min-height: 420px;
             height: 60vh;
             background: url('./Heart hands.png') center center/cover no-repeat;
+            -webkit-background-size: cover;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .hero-overlay {
+            width: 100%;
+            min-height: inherit;
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(0,0,0,0.28);
@@ -159,6 +163,25 @@
         .instagram-link:hover {
             transform: scale(1.08);
         }
+        .footer-socials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 8px;
+        }
+        .footer-socials img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            background: transparent;
+            padding: 0;
+            box-sizing: content-box;
+        }
+        .footer-socials .twitter-link img {
+            width: 28px;
+            height: 28px;
+        }
         /* Responsive Styles */
         @media (max-width: 900px) {
             .info-section {
@@ -219,6 +242,8 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.18);
             width: 100%;
             text-align: center;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .content-container p {
@@ -329,10 +354,14 @@
         <div class="footer-content">
             <div class="footer-main">Follow our journey on our social media for pre-seed updates.</div>
             <br>
-
-            <a href="https://www.instagram.com/wazicare/" target="_blank" class="instagram-link" aria-label="Instagram" rel="noopener">
-                <img src="./insta.png" alt="Instagram" style="width:32px;height:32px;display:block;" />
-            </a>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/wazicare/" target="_blank" class="instagram-link" aria-label="Instagram" rel="noopener">
+                    <img src="./insta.png" alt="Instagram" style="width:32px;height:32px;display:block;" />
+                </a>
+                <a href="https://x.com/WaziCarePlus" target="_blank" class="twitter-link" aria-label="Twitter" rel="noopener">
+                    <img src="./twitter.png" alt="Twitter" style="width:32px;height:32px;display:block;" />
+                </a>
+            </div>
         </div>
     </footer>
     <!-- n8n Chatbot Script -->
