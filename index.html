@@ -12,174 +12,349 @@
     <meta property="og:description" content="WaziCare+ is an upcoming platform dedicated to maternal health, providing essential resources and support for every woman. Stay tuned for our launch!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.wazicareplus.org/">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- n8n Chatbot Integration -->
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <style>
-        body, html {
+        html, body {
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%;
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #222;
+            background: #fff;
+        }
+        .hero-section {
+            position: relative;
+            width: 100vw;
+            min-height: 420px;
+            height: 60vh;
+            background: url('./Heart hands.png') center center/cover no-repeat;
             display: flex;
-            justify-content: center;
             align-items: center;
-            overflow: hidden;
-            /* Background Gradient using your specified hex colors */
-            background: linear-gradient(
-                145deg, /* Angle maintained for diagonal flow */
-                #13B588 0%,    /* Vibrant Green */
-                #D9D9D9 25%,   /* Light Gray */
-                #1A8FE5 75%,   /* Strong Blue */
-                #13B588 100%   /* Vibrant Green again */
-            );
-
-            font-family: 'Lato', sans-serif; /* General body font */
-            color: #333;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased; /* For smoother text on Mac */
-            -moz-osx-font-smoothing: grayscale; /* For smoother text on Mac */
+            justify-content: center;
         }
-
-        /* Styles for the new logo image */
-        .top-logo {
-            position: absolute; /* Position it relative to the body */
-            top: 40px; /* Distance from the top */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Adjust for true centering */
-            width: 150px; /* Adjust logo width as needed */
-            height: auto; /* Maintain aspect ratio */
-            z-index: 2; /* Ensure it's above other elements if needed */
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.28);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            z-index: 1;
         }
-        
-        .content-container {
-            /* Glassmorphism Box Styling */
-            background: rgba(255, 255, 255, 0.25); /* Semi-transparent background */
-            backdrop-filter: blur(12px); /* Glassmorphism blur effect */
-            -webkit-backdrop-filter: blur(12px); /* For Safari support */
-            border-radius: 18px; /* Rounded corners */
-            padding: 45px 65px; /* Internal spacing */
+        .hero-logo {
+            width: 90px;
+            margin-bottom: 0;
+            display: block;
+        }
+        .hero-text-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text-box h1 {
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            background: linear-gradient(90deg, #13B588 0%, #1A8FE5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
             text-align: center;
-            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.3); /* Subtle shadow */
-            border: 1px solid rgba(255, 255, 255, 0.1); /* Very subtle border */
-            max-width: 650px; /* Limit box width */
-            /* Add some top margin to push it down from the logo */
-            margin-top: 150px; /* Adjust this value to position the card below the logo */
-            margin-left: 20px; /* Keep side margins */
-            margin-right: 20px; /* Keep side margins */
-            margin-bottom: 20px;
-            box-sizing: border-box; /* Include padding/border in width */
-            display: flex; /* Use flexbox for vertical centering of content */
+            margin: 0;
+            padding: 32px 24px;
+            border-radius: 18px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+            background-color: rgba(255,255,255,0.10);
+        }
+        .info-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 48px auto 0 auto;
+            padding: 0 24px 0 24px;
+            z-index: 2;
+            position: relative;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            padding: 40px 36px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            min-height: 210px;
+            border: 1px solid #f2f2f2;
+            max-width: 100%;
+        }
+        .info-card .icon {
+            margin-bottom: 18px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .info-card .icon img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .info-card h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.3em;
+            font-weight: 700;
+            margin: 0 0 14px 0;
+            color: #222;
+        }
+        .info-card p {
+            font-size: 1.08em;
+            color: #444;
+            margin: 0;
+        }
+        .footer-section {
+            width: 100vw;
+            background: linear-gradient(145deg, rgba(19,181,136,0.85) 0%, rgba(217,217,217,0.70) 25%, rgba(26,143,229,0.80) 75%, rgba(19,181,136,0.85) 100%);
+            padding: 28px 0 18px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 48px;
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+        .footer-content .footer-main {
+            color: #fff;
+            font-size: 1.5em;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .footer-content .footer-note {
+            color: #e6f7f3;
+            font-size: 1em;
+            margin-bottom: 12px;
+        }
+        .instagram-link {
+            margin: 0;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .instagram-link:hover {
+            transform: scale(1.08);
+        }
+        /* Responsive Styles */
+        @media (max-width: 900px) {
+            .info-section {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                max-width: 98vw;
+                margin: 32px auto 0 auto;
+                padding: 0 8px 0 8px;
+            }
+            .hero-logo {
+                width: 70px;
+                margin-bottom: 18px;
+            }
+            .hero-text-box h1 {
+                font-size: 1.2em;
+                padding: 18px 8px;
+            }
+            .info-section {
+                padding: 24px 4px 0 4px;
+            }
+            .info-card {
+                padding: 24px 10px 20px 10px;
+            }
+            .footer-section {
+                padding: 28px 0 18px 0;
+            }
+            .footer-content span {
+                font-size: 1.1em;
+            }
+            .footer-note {
+                font-size: 0.9em;
+            }
+        }
+        .hero-card-container {
+            background: linear-gradient(145deg, rgba(19,181,136,0.85) 0%, rgba(217,217,217,0.70) 25%, rgba(26,143,229,0.80) 75%, rgba(19,181,136,0.85) 100%);
+            border-radius: 24px;
+            padding: 48px 80px;
+            text-align: center;
+            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 820px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-
-        .content-container h1 {
-            font-family: 'Montserrat', sans-serif; /* Specific font for heading */
-            font-size: 2.3em; /* Heading font size */
-            font-weight: 700; /* Bold heading */
-            color: #2b2b2b; /* Dark text color */
-            margin-bottom: 22px; /* Spacing below heading */
-            line-height: 1.35; /* Line height for readability */
-            letter-spacing: -0.02em; /* Subtle letter spacing */
+        .hero-card-container h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0;
+            line-height: 1.4;
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            width: 100%;
+            text-align: center;
         }
 
         .content-container p {
-            font-family: 'Lato', sans-serif; /* Paragraph font */
+            font-family: 'Plus Jakarta Sans', sans-serif; /* Paragraph font */
             font-size: 1.05em; /* Paragraph font size */
             color: #4a4a4a; /* Darker gray for subtext */
             margin-bottom: 0;
             line-height: 1.5;
         }
-
-        .copyright {
-            position: absolute;
-            bottom: 25px; /* Position from bottom */
-            width: 100%;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.75); /* Light color for copyright text */
-            font-size: 0.8em; /* Smaller font size */
-            font-family: 'Lato', sans-serif;
-            font-weight: 400;
-            padding: 0 10px;
-            box-sizing: border-box;
-        }
-
-        /* Responsive Adjustments for Smaller Screens */
-        @media (max-width: 768px) {
-            .top-logo {
-                width: 120px; /* Smaller logo on small screens */
-                top: 30px;
-            }
+        @media (max-width: 600px) {
             .content-container {
-                padding: 35px 45px;
-                max-width: 90%;
-                margin-top: 100px; /* Adjust margin for smaller logo */
+                max-width: 98vw;
+                padding: 18px 4vw;
             }
             .content-container h1 {
-                font-size: 1.9em;
+                font-size: 1.2em;
             }
-            .content-container p {
-                font-size: 1.0em;
+            .hero-logo {
+                width: 44px;
+                margin-bottom: 10px;
+            }
+            .hero-overlay {
+                padding-top: 16px;
+                padding-bottom: 16px;
+                gap: 10px;
+            }
+            .hero-section {
+                min-height: 60vh;
+                background-size: cover;
+                background-position: center;
             }
         }
-
-        @media (max-width: 480px) {
-            .top-logo {
-                width: 100px; /* Even smaller logo */
-                top: 20px;
+        @media (max-width: 900px) {
+            .hero-section {
+                height: auto;
+                min-height: 320px;
             }
             .content-container {
-                padding: 25px 35px;
-                max-width: 95%; /* Allow it to be a bit wider */
-                margin-top: 80px; /* Adjust margin for smallest logo */
+                padding: 22px 6vw;
+                max-width: 98vw;
             }
-            .content-container h1 {
-                font-size: 1.6em;
+            .hero-logo {
+                width: 54px;
+                margin-bottom: 10px;
             }
-            .content-container p {
-                font-size: 0.9em;
+            .hero-overlay {
+                gap: 14px;
             }
-            .copyright {
-                font-size: 0.75em;
-                bottom: 15px;
+        }
+        @media (max-width: 600px) {
+            .hero-section {
+                min-height: 260px;
+                height: 38vh;
+                background-size: cover;
+                background-position: center;
+            }
+            .content-container {
+                padding: 12px 2vw;
+                max-width: 99vw;
+            }
+            .hero-logo {
+                width: 38px;
+                margin-bottom: 6px;
+            }
+            .hero-overlay {
+                gap: 6px;
             }
         }
     </style>
 </head>
 <body>
-    <img src="./wazicarelogo.png" alt="WaziCare+ Logo" class="top-logo"> 
-
-    <div class="content-container">
-        <h1>WaziCare+ is coming soon, <br> Maternal Health for Every Woman.</h1>
-        <p>We will launch our website soon!</p>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-overlay">
+            <img src="./wazicarelogo.png" alt="WaziCare+ Logo" class="hero-logo">
+            <div class="hero-card-container">
+                <h1>Dignity. Healing<br>Maternal Health for every woman</h1>
+            </div>
+        </div>
     </div>
 
-    <div class="copyright">
-        WaziCare+ © 2025 All Rights Reserved
-    </div>
+    <!-- Info Cards Section -->
+    <section class="info-section">
+        <div class="info-card">
+            <div class="icon about"><img src="./about us.png" alt="About Us Icon" style="width: 32px; height: 32px;"></div>
+            <h2>About Us</h2>
+            <p>WaziCare+ is a women-led, youth-powered health startup restoring dignity through maternal health care and digital healing solutions in Kenya’s underserved rural communities.</p>
+        </div>
+        <div class="info-card">
+            <div class="icon mission"><img src="./our mission.png" alt="Our Mission Icon" style="width: 32px; height: 32px;"></div>
+            <h2>Our Mission</h2>
+            <p>To bridge the health access gap for underserved women and youth in Kenya using inclusive technology and community-based support.</p>
+        </div>
+        <div class="info-card">
+            <div class="icon how"><img src="./our how.png" alt="Our How Icon" style="width: 32px; height: 32px;"></div>
+            <h2>Our How</h2>
+            <p>We bring life-saving care closer to home through mobile clinics, trauma-informed maternal support, and AI-powered tools that empower young mothers with access, knowledge, and hope.</p>
+        </div>
+        <div class="info-card">
+            <div class="icon vision"><img src="./our vision.png" alt="Our Vision Icon" style="width: 32px; height: 32px;"></div>
+            <h2>Our Vision</h2>
+            <p>A future where no woman dies giving life, and every mother, regardless of geography or income, can raise her children with strength, safety, and support.</p>
+        </div>
+    </section>
 
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-main">Follow our journey.</div>
+            <div class="footer-note">Socials for pre-seed updates.</div>
+            <a href="https://www.instagram.com/wazicare/" target="_blank" class="instagram-link" aria-label="Instagram" rel="noopener">
+                <img src="./insta.png" alt="Instagram" style="width:32px;height:32px;display:block;" />
+            </a>
+        </div>
+    </footer>
     <!-- n8n Chatbot Script -->
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
         createChat({
             webhookUrl: 'https://gicheha.app.n8n.cloud/webhook/ffcf29b6-19e9-40fd-81a6-132910560043/chat',
-            // Modern theme configuration matching website colors
             theme: {
-                primaryColor: '#13B588',      // Vibrant Green from your gradient
-                secondaryColor: '#1A8FE5',    // Strong Blue from your gradient
-                backgroundColor: '#f8f9fa',    // Light modern background
-                textColor: '#2b2b2b',         // Dark text for readability
-                borderColor: '#e9ecef',       // Subtle borders
-                borderRadius: '12px',         // Modern rounded corners
-                shadow: '0 4px 20px rgba(19, 181, 136, 0.15)' // Subtle green shadow
+                primaryColor: '#13B588',
+                secondaryColor: '#1A8FE5',
+                backgroundColor: '#f8f9fa',
+                textColor: '#2b2b2b',
+                borderColor: '#e9ecef',
+                borderRadius: '12px',
+                shadow: '0 4px 20px rgba(19, 181, 136, 0.15)'
             },
-            // Add custom welcome message with female name and mission context
-            welcomeMessage: "👋 Hello! I'm Aisha, your WaziCare+ AI health assistant.\n\nWe're an early-stage health-tech initiative using AI to support preventive care in underserved, climate-affected communities in Kenya. Using AI to improve access, dignity, and equity in community care.\n\nI'm here to help you with maternal health information and community care resources. How can I assist you today?"
+            welcomeMessage: "👋 Hello! I'm Aisha, your WaziCare+ AI health assistant.\n\nWe're an early-stage health-tech initiative using AI to support preventive care in underserved, climate-affected communities in Kenya. Using AI to improve access, dignity, and equity in community care.\n\nI'm here to help you with maternal health information and community care resources. How can I assist you today?",
+            debug: true,
+            onError: (error) => {
+                console.error('Chatbot error:', error);
+                alert('Chatbot is loading... Please check your n8n workflow configuration.');
+            }
         });
     </script>
 </body>
