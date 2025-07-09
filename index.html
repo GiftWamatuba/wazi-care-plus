@@ -369,22 +369,7 @@
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
         createChat({
-            webhookUrl: 'https://gicheha.app.n8n.cloud/webhook/ffcf29b6-19e9-40fd-81a6-132910560043/chat',
-            theme: {
-                primaryColor: '#13B588',
-                secondaryColor: '#1A8FE5',
-                backgroundColor: '#f8f9fa',
-                textColor: '#2b2b2b',
-                borderColor: '#e9ecef',
-                borderRadius: '12px',
-                shadow: '0 4px 20px rgba(19, 181, 136, 0.15)'
-            },
-            welcomeMessage: "👋 Hello! I'm Aisha, your WaziCare+ AI health assistant.\n\nWe're an early-stage health-tech initiative using AI to support preventive care in underserved, climate-affected communities in Kenya. Using AI to improve access, dignity, and equity in community care.\n\nI'm here to help you with maternal health information and community care resources. How can I assist you today?",
-            debug: true,
-            onError: (error) => {
-                console.error('Chatbot error:', error);
-                alert('Chatbot is loading... Please check your n8n workflow configuration.');
-            }
+            webhookUrl: 'https://mr-yuri.app.n8n.cloud/webhook/ffcf29b6-19e9-40fd-81a6-132910560043/chat'
         });
     </script>
 </body>
