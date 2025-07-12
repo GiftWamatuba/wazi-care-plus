@@ -94,39 +94,40 @@
             background: #fff;
             border-radius: 18px;
             box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-            padding: 40px 36px 36px 36px;
+            padding: 32px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             text-align: left;
-            min-height: 210px;
+            height: 320px;
             border: 1px solid #f2f2f2;
             max-width: 100%;
+            box-sizing: border-box;
         }
         .info-card .icon {
-            margin-bottom: 18px;
-            width: 40px;
-            height: 40px;
+            margin-bottom: 16px;
+            width: 48px;
+            height: 48px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
         .info-card .icon img {
-            width: 40px;
-            height: 40px;
+            width: 48px;
+            height: 48px;
             object-fit: contain;
         }
         .info-card h2 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1.3em;
             font-weight: 700;
-            margin: 0 0 14px 0;
+            margin: 0 0 8px 0;
             color: #222;
         }
         .info-card p {
-            font-size: 1.08em;
+            font-size: 1.12em;
             color: #444;
-            margin: 0;
+            margin: 0 0 0 0;
         }
         .footer-section {
             width: 100vw;
@@ -182,6 +183,19 @@
             width: 28px;
             height: 28px;
         }
+        .learn-more-link {
+            margin-top: auto;
+            color: #888;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            transition: color 0.2s;
+            padding-top: 16px;
+        }
+        .learn-more-link:hover {
+            color: #1A8FE5;
+            text-decoration: underline;
+        }
         /* Responsive Styles */
         @media (max-width: 900px) {
             .info-section {
@@ -203,7 +217,9 @@
                 padding: 24px 4px 0 4px;
             }
             .info-card {
-                padding: 24px 10px 20px 10px;
+                padding: 24px;
+                height: auto;
+                min-height: 280px;
             }
             .footer-section {
                 padding: 28px 0 18px 0;
@@ -230,6 +246,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-height: 180px;
         }
         .hero-card-container h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -320,7 +337,7 @@
         <div class="hero-overlay">
             <img src="./wazicarelogo.png" alt="WaziCare+ Logo" class="hero-logo">
             <div class="hero-card-container">
-                <h1>Dignity. Healing<br>Maternal Health for every woman</h1>
+                <h1>Unlocking Equitable Care for Women and Youth in Kenya</h1>
             </div>
         </div>
     </div>
@@ -328,31 +345,35 @@
     <!-- Info Cards Section -->
     <section class="info-section">
         <div class="info-card">
-            <div class="icon about"><img src="./about us.png" alt="About Us Icon" style="width: 32px; height: 32px;"></div>
+            <div class="icon"><img src="./about us.png" alt="About Us Icon"></div>
             <h2>About Us</h2>
-            <p>WaziCare+ is a women-led, youth-powered health startup restoring dignity through maternal health care and digital healing solutions in Kenya’s underserved rural communities.</p>
+            <p>WaziCare+ is a women-led, youth-powered health startup restoring dignity through maternal health care and digital healing solutions in Kenya's underserved rural communities.</p>
+            <a href="#" class="learn-more-link">Learn More &rarr;</a>
         </div>
         <div class="info-card">
-            <div class="icon mission"><img src="./our mission.png" alt="Our Mission Icon" style="width: 32px; height: 32px;"></div>
+            <div class="icon"><img src="./our mission.png" alt="Our Mission Icon"></div>
             <h2>Our Mission</h2>
             <p>To bridge the health access gap for underserved women and youth in Kenya using inclusive technology and community-based support.</p>
+            <a href="#" class="learn-more-link">Learn More &rarr;</a>
         </div>
         <div class="info-card">
-            <div class="icon how"><img src="./our how.png" alt="Our How Icon" style="width: 32px; height: 32px;"></div>
-            <h2>Our How</h2>
+            <div class="icon"><img src="./our how.png" alt="Our How Icon"></div>
+            <h2>How We Help</h2>
             <p>We bring life-saving care closer to home through mobile clinics, trauma-informed maternal support, and AI-powered tools that empower young mothers with access, knowledge, and hope.</p>
+            <a href="#" class="learn-more-link">Learn More &rarr;</a>
         </div>
         <div class="info-card">
-            <div class="icon vision"><img src="./our vision.png" alt="Our Vision Icon" style="width: 32px; height: 32px;"></div>
+            <div class="icon"><img src="./our vision.png" alt="Our Vision Icon"></div>
             <h2>Our Vision</h2>
             <p>A future where no woman dies giving life, and every mother, regardless of geography or income, can raise her children with strength, safety, and support.</p>
+            <a href="#" class="learn-more-link">Learn More &rarr;</a>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="footer-content">
-            <div class="footer-main">Follow our journey on our social media for pre-seed updates.</div>
+            <div class="footer-main">Follow our journey on social media for pre-seed updates.</div>
             <br>
             <div class="footer-socials">
                 <a href="https://www.instagram.com/wazicare/" target="_blank" class="instagram-link" aria-label="Instagram" rel="noopener">
